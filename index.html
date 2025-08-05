@@ -167,17 +167,32 @@
                 font-size: 0.9rem;
             }
         }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px; /* Adjust spacing between image and text */
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .logo-container h1 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #202124;
+        }
+
     </style>
 </head>
 <body>
 
     <header>
-        <a href="index.html">
-        <img src="https://github.com/xde230/virustotal/blob/main/vt.png?raw=true" alt="Logo" width="50" height="50">
-        <h1 style="color: #202124; text-decoration: none;">VirusTotal</h1>
+        <a href="index.html" class="logo-container">
+            <img src="https://github.com/xde230/virustotal/blob/main/vt.png?raw=true" alt="Logo" width="50" height="50">
+            <h1>VirusTotal</h1>
         </a>
         <a href="download.html" class="download-btn">Download Now</a>
     </header>
+
 
     <section class="hero">
         <h2>Scan URLs Instantly for Malware</h2>
@@ -199,6 +214,7 @@
 
 </body>
 </html>
+
 
 
 
